@@ -1,2 +1,2 @@
-# aurlcut
+# aurlcutter
 asynchorous python url shortener
