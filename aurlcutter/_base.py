@@ -1,11 +1,13 @@
-from _types import *
-from _validators import *
+from ._types import *
+from ._validators import *
 
 import httpx
 
 
 class BaseCutter:
-    """"""
+    """
+    Base class with methods for every Cutter implementation
+    """
 
     def __init__(self, **kwargs) -> None:
         for key, value in kwargs.items():
@@ -59,7 +61,8 @@ class BaseCutter:
         return response
 
     async def cut(self, url: str) -> str:
-        """Cutting URL using shortening service API
+        """
+        Cutting URL using shortening service API
 
         Args:
             url (str): URL to shorten.
