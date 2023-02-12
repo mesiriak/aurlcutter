@@ -11,13 +11,13 @@ logger = logging.getLogger(__name__)
 
 class Cutter(BaseCutter):
     """
-    Osdb shortener implementation   
+    Osdb shortener implementation
     """
-    
+
     api_url = OSDB
-    
+
     response_re = re.compile(r"http:\/\/osdb\.link\/.*<", re.IGNORECASE)
-    
+
     async def cut(self, url: str) -> str:
         """
         OSDB cutter method
@@ -31,7 +31,7 @@ class Cutter(BaseCutter):
         Returns:
             str: Shorted url
         """
-        
+
         url = await validate_url(url)
         response = await self._post(self.api_url, data={"url": url})
 

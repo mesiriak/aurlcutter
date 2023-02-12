@@ -10,11 +10,11 @@ logger = logging.getLogger(__name__)
 
 class Cutter(BaseCutter):
     """
-    Chilp.it shortener implementation   
+    Chilp.it shortener implementation
     """
-    
+
     api_url = CHILPIT
-    
+
     async def cut(self, url: str) -> str:
         """
         Chilp.it request and get method

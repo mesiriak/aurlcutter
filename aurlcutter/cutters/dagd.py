@@ -15,11 +15,11 @@ class Cutter(BaseCutter):
     """
 
     api_url = DAGD
-    
+
     async def cut(self, url: str) -> str:
         """
         Dd.gd cut method implementation
-        
+
         Args:
             url (str): URL u want to cut
 
@@ -29,11 +29,11 @@ class Cutter(BaseCutter):
         Returns:
             str: Short url if everything is ok
         """
-        
+
         url = await validate_url(url)
-        response = await self._get(self.api_url + "shorten", params={"url": url})
+        response = await self._get(self.api_url, params={"url": url})
 
         if response.status_code == 200:
             return response.text.strip()
-        
+
         raise CuttingErrorException(response.content)

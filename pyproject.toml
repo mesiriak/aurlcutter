@@ -4,14 +4,22 @@ version = "0.0.1"
 description = "Asynchronous lib for making short urls"
 authors = ["Mesiriak <iamzhv@gmail.com>"]
 readme = "README.md"
+homepage = "https://github.com/mesiriak/aurlcutter"
+repository = "https://github.com/mesiriak/aurlcutter"
+license = "GPL-3.0"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-
+httpx = "^0.23.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2.1"
 black = "^23.1.0"
+pytest-asyncio = "^0.20.3"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests/"]
 
 [build-system]
 requires = ["poetry-core"]
