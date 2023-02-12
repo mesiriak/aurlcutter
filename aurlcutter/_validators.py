@@ -1,4 +1,4 @@
-from _exceptions import *
+from ._exceptions import *
 
 import re
 

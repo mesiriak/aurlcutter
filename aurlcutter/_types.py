@@ -1,4 +1,4 @@
-from typing import Iterator, AsyncIterator, Sequence, Any, Mapping
+from typing import Iterator, AsyncIterator, Sequence, Any, Mapping, TypeVar
 from httpx import Cookies, Response
 
 
@@ -18,3 +18,5 @@ ParamsType = (
 CookiesType = dict[str, Any] | Cookies
 
 ResponseType = Response
+
+SomeCutterInstance = TypeVar("SomeCutterInstance")
