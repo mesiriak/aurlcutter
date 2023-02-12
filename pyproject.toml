@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aurlcutter"
-version = "0.0.1"
+version = "0.0.1a"
 description = "Asynchronous lib for making short urls"
 authors = ["Mesiriak <iamzhv@gmail.com>"]
 readme = "README.md"
