@@ -16,7 +16,7 @@ class BaseCutter:
         # self.proxies = getattr(self, "proxies", {}) Should be implemented
 
         self.timeout = getattr(self, "timeout", 2)
-        self.allow_redirects = getattr(self, "allow_redirect", True)
+        self.follow_redirects = getattr(self, "follow_redirects", True)
         self.cert = getattr(self, "cert", None)
 
         self._async_client = httpx.AsyncClient()
@@ -31,7 +31,7 @@ class BaseCutter:
             params=params,
             headers=headers,
             timeout=self.timeout,
-            allow_redirects=self.allow_redirects,
+            follow_redirects=self.follow_redirects,
         )
 
         return response
@@ -55,7 +55,7 @@ class BaseCutter:
             data=data,
             cookies=cookies,
             timeout=self.timeout,
-            allow_redirects=self.allow_redirects,
+            follow_redirects=self.follow_redirects,
         )
 
         return response
