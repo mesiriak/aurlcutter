@@ -13,15 +13,7 @@
 pip install aurlcutter
 ```
 
-### Open services:
-#
-- <a href="https://tinyurl.com">tinyurl</a>
-- <a href="https://chilp.it/">chilpit</a>
-- <a href="https://da.gd/">dagd</a> 
-- <a href="https://is.gd/">isgd</a>
-- <a href="https://osdb.link/">osdb</a>
-
-### For watcing full list:
+### For watcing full list of services:
 #
 ```python
 from aurlcutter import Cutter
