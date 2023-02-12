@@ -35,5 +35,5 @@ cutter_instance = Cutter()
 your_link = "www.google.com"
 
 # you can choose api what you need by yourself
-cutted_link = cutter_instance.tinyurl.cut(your_link)
+cutted_link = await cutter_instance.tinyurl.cut(your_link)
 ```
