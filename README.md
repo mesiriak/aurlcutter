@@ -36,4 +36,4 @@ your_link = "www.google.com"
 
 # you can choose api what you need by yourself
 cutted_link = cutter_instance.tinyurl.cut(your_link)
->>>>>>> Stashed changes
+```
